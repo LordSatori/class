@@ -118,13 +118,6 @@ export default function Payment() {
     }));
   }
 
-  // keep togglePayment for backwards compatibility if other code relies on it
-  function togglePayment(studentId, month) {
-    const student = students.find(s => s.id === studentId);
-    const current = student?.payment?.[month];
-    setPaymentStatus(studentId, month, current === true ? false : true);
-  }
-
   function handleSubmit(e) {
     e.preventDefault();
     if (!form.studentId || !form.month) return;
