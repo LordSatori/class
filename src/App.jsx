@@ -1,6 +1,6 @@
 //React Tools
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 //Components
 import Sidebar from "./components/Sidebar";
@@ -12,7 +12,7 @@ import Score from "./Pages/Score";
 
 function App() {
   return (
-    <BrowserRouter basename="/class">
+    <Router>
       <main style={{height : 2500}} className="d-flex bg-body-tertiary">
         <div className="w-25 bg-dark">
           <Sidebar />
@@ -20,12 +20,12 @@ function App() {
         <div className="w-75">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/class/payment" element={<Payment />} />
-            <Route path="/class/score" element={<Score />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/score" element={<Score />} />
           </Routes>
         </div>
       </main>
-    </BrowserRouter>
+    </Router>
   )
 }
 
