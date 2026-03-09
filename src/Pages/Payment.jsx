@@ -10,56 +10,7 @@ export default function Payment() {
   const [students, setStudents] = useState(() =>  {
     try{
       const saveStudent = localStorage.getItem("student")
-      return saveStudent ? JSON.parse(saveStudent) : [
-        {
-      id: 1,
-      name: 'Chhon chanliza',
-      payment: {
-        'February': false,
-        'March': false,
-        'April': false,
-        'May': false,
-        'June': false,
-        'July': false
-      }
-    },
-    { id: 2, 
-      name: 'Em Sotheara', 
-      payment: { 
-        'February': false, 
-        'March': false, 
-        'April': false, 
-        'May': false, 
-        'June': false, 
-        'July': false } },
-    { id: 3, 
-      name: 'Eng Sonyta', 
-      payment: { 
-        'February': false, 
-        'March': false, 
-        'April': false, 
-        'May': false, 
-        'June': false, 
-        'July': false } },
-    { id: 4, 
-      name: 'Loch Liza', 
-      payment: { 
-        'February': false, 
-        'March': false, 
-        'April': false, 
-        'May': false, 
-        'June': false, 
-        'July': false } },
-    { id: 5, 
-      name: 'Ouk Liza', 
-      payment: { 
-        'February': false, 
-        'March': false, 
-        'April': false, 
-        'May': false, 
-        'June': false, 
-        'July': false } }
-      ];
+      return saveStudent ? JSON.parse(saveStudent) : [];
     } catch {
       return [];
     }
